@@ -120,8 +120,16 @@ precio(diclofenaco, barato).
 precio(buscapina, barato).
 precio(ciplofloxacino, caro).
 
-comprar_medicamento( Uso,Presentacion,Precio ):- funcion(Medicamento, Uso), presentacion(Medicamento, Presentacion), precio(Medicamento, Precio), nl, write(Medicamento). 
+comprar_medicamento( Uso,Presentacion,Precio ):-funcion(Medicamento, Uso),
+                                                presentacion(Medicamento, Presentacion),
+                                                precio(Medicamento, Precio),
+                                                nl, write(Medicamento). 
 
-padecimiento(Uso):-medicametos(Medicamento),funcion(Medicamento,Uso),nl, write(Medicamento).
+padecimiento(Uso):-medicametos(Medicamento),
+                   funcion(Medicamento,Uso),
+                   nl, write(Medicamento).
 
-algo(Uso,Costo):-medicametos(Medicamento),funcion(Medicamento,Uso),precio(Medicamento,Costo),write(Medicamento).
+algo(Uso,Costo):-medicametos(Medicamento),
+                 funcion(Medicamento,Uso),
+                 precio(Medicamento,Costo),
+                 write(Medicamento).

@@ -1,0 +1,1 @@
+is_selected(Elemento, [_|List1], [_|List2]):- is_selected(Elemento, List1, List2).
